@@ -15,7 +15,7 @@ function Welcome({name,pic}){
   return(
     <div>
       <img alt={name} className="pro-pic" src={pic}/>
-      <h1>Hello,{name} </h1>
+      <h1>Hello,{name}😎✔ </h1>
     </div>
   );
 }
