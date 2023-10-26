@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+#hello{
+  font-style: italic;
+
+}
+.pro-pic{
+  height: 250px;
+  aspect-ratio: 1 / 1;
+  object-fit:cover;
+  border-radius: 50%;
+}
