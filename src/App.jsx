@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import "./App.css";
 
 export default function App() {
@@ -18,17 +18,31 @@ export default function App() {
   ];
   return (
     <div className="App">
-      {users}.map((usr) = (
+      {users.map((usr) => (
       <Welcome name={usr.name} pic={usr.pic} />
-      ))
+      ))}
     </div>
   );
 }
 
-// function Welcome({name,pic}){
-//   // const {name, pic} = props;
-//   return(
-//     <div>
-//       <img alt={name} className="pro-pic" src={pic}/>
-//       <h1>Hello,{name}😎✔ </h1>
-//     </div>
+function Welcome({ name, pic }) {
+  // const {name, pic} = props;
+  return (
+    <div className="user-area">
+      <img alt={name} className="pro-pic" src={pic} />
+      <h1>Hello,{name}😎 </h1>
+      <Counter/>
+    </div>
+  );
+}
+
+function Counter(){
+  const[like,setLike]=useState(0);
+  const[dislike,setdislike]=useState(0);
+  return(
+    <div>
+      <button onClick={()=>setLike(like+1)}>💖{like}</button>
+      <button onClick={()=>setdislike(dislike+1)}>💔{dislike}</button>
+    </div>
+  );
+}
